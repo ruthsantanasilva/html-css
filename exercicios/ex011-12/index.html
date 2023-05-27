@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu
+        navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo audio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!-- <audio src="midia/love.mp3" controls autoplay></audio>--> <!--maneira mais simples-->
+
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/love.mp3" type="audio/mpeg">
+        <source src="midia/love.ogg" type="audio/ogg">
+        <source src="midia/love.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.<a href="midia/love.mp3"> Clique aqui para baixar o
+                arquivo MP3</a></p>
+    </audio>
+
+    <h1>Videos hospedados localmente</h1>
+    <p>Colocar video é muito simples!</p>
+
+    <video src="midia/dinheiro.mp4" width="700" poster="imagens/capa.png" controls autoplay loop></video>
+    <!--Hospedar video assim pode ficar muito caro para o cliente-->
+
+    <h1>Inserindo videos do Youtube</h1>
+    <!--Acessa o site Youtube, abaixo do video clique em compartilhar, depois em imcorporar, copia o código HTML e cola aqui.-->
+    <iframe width="700" height="350" src="https://www.youtube.com/embed/OzUnqQk4eOg" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+</body>
+
+</html>

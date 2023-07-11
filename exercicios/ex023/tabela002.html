@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+
+        }
+        thead{
+            background-color: orange;
+            color: aliceblue;
+        }
+        td.num{
+
+        }
+        tfoot{
+            background-color: rgba(255, 166, 0, 0.575);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tableas grandes</h1>
+    <!--ANATOMIA PARA TABELAS GRANDES (tem que ser assim!)
+    TABLE 
+      THEAD CABEÇALHO
+        TR, TD, TH
+    TBODY CORPO
+        TR,TD,TH
+    TFOOT RODAPÉ
+        TR, TD,TH -->
+
+        <table>
+            <thead>
+                <tr>
+                   <th>Estado</th>
+                   <th>População</th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                 <tr>
+                    <td>
+                        São Paulo
+                    </td>
+                    <td class="num"> 45.919.649</td>
+                 </tr>
+                 <tr>
+                    <td>
+                        Minas Gerais
+                    </td>
+                    <td class="num"> 21.168.791</td>
+                 </tr>
+                 <tr>
+                    <td>
+                        Rio de Janeiro
+                    </td>
+                    <td class="num"> 17.264.943</td>
+                 </tr>
+                 <tr>
+                    <td>
+                        Bahia
+                    </td>
+                    <td class="num">14.873.064</td>
+                 </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total População</th>
+                    <td>00000</td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>

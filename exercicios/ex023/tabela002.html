@@ -1,87 +1,344 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas</title>
+    <title>Tabelas com cabecalho fixo</title>
     <style>
-        body{
+        body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        table{
-            width: 400px;
+        table {
+            width: 500px;
             border-collapse: collapse;
+            margin: auto;
+            position: relative;
         }
-        td, th{
+        h1{
+            text-align: center;
+        }
+
+        td,
+        th {
             border: 1px solid black;
 
         }
-        thead{
+
+        thead {
             background-color: orange;
             color: aliceblue;
         }
-        td.num{
 
-        }
-        tfoot{
+        tfoot {
             background-color: rgba(255, 166, 0, 0.575);
             color: aliceblue;
         }
+
+        tbody>tr:nth-child(odd) {
+            background-color: rgba(0, 183, 255, 0.438);
+        }
+
+        tbody>tr:nth-child(even) {
+            background-color: rgb(177, 100, 160);
+        }
+
+        .num {
+            text-align: right;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(255, 166, 0, 0.24);
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: orange;
+        }
     </style>
 </head>
+
 <body>
     <h1>Uso de tableas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES (tem que ser assim!)
-    TABLE 
-      THEAD CABEÇALHO
+    TABLE
+    CAPTION (LEGENDA) 
+      THEAD (CABEÇALHO)
         TR, TD, TH
-    TBODY CORPO
+    TBODY (CORPO)
         TR,TD,TH
-    TFOOT RODAPÉ
+    TFOOT (RODAPÉ)
         TR, TD,TH -->
 
-        <table>
-            <thead>
-                <tr>
-                   <th>Estado</th>
-                   <th>População</th>
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População</th>
 
-                </tr>
+            </tr>
 
-            </thead>
-            <tbody>
-                 <tr>
-                    <td>
-                        São Paulo
-                    </td>
-                    <td class="num"> 45.919.649</td>
-                 </tr>
-                 <tr>
-                    <td>
-                        Minas Gerais
-                    </td>
-                    <td class="num"> 21.168.791</td>
-                 </tr>
-                 <tr>
-                    <td>
-                        Rio de Janeiro
-                    </td>
-                    <td class="num"> 17.264.943</td>
-                 </tr>
-                 <tr>
-                    <td>
-                        Bahia
-                    </td>
-                    <td class="num">14.873.064</td>
-                 </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Total População</th>
-                    <td>00000</td>
-                </tr>
-            </tfoot>
-        </table>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    São Paulo
+                </td>
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>
+                    Minas Gerais
+                </td>
+                <td class="num"> 21.168.791</td>
+            </tr>
+            <tr>
+                <td>
+                    Rio de Janeiro
+                </td>
+                <td class="num"> 17.264.943</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+            <tr>
+                <td>
+                    Bahia
+                </td>
+                <td class="num">14.873.064</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total População</th>
+                <td class="num">00000000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam autem aliquam nihil assumenda enim asperiores beatae ut recusandae voluptas nulla doloribus fugiat quas iusto voluptatibus, id dolorem provident, libero sit!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, dolorum? Ut molestias repellendus quod natus repudiandae, saepe recusandae quasi, enim totam dignissimos officia numquam. Voluptate culpa a deleniti modi placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquam, nemo error commodi doloribus enim. Nobis quae, accusamus similique cumque repellendus pariatur mollitia id magnam fugit illo. Recusandae, repellendus quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti nesciunt natus beatae nihil! Possimus in accusamus earum iste nisi hic, sint beatae omnis velit accusantium maiores, quia, quidem nesciunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium facilis totam animi inventore. Officiis animi neque quisquam provident. Dolorem facilis repellat pariatur eaque quo debitis eligendi ab quis libero!</p>
+
+
 </body>
+
 </html>

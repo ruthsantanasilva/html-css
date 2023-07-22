@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*Estilos para a tela*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+header {
+    background-color: antiquewhite;
+}
+
+header h1 {
+    text-align: center;
+}
+
+menu ul {
+    list-style-type: none;
+    background-color: gray;
+}
+
+menu li {
+    background-color: darkcyan;
+    color: beige;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+article {
+    width: 650px;
+    display: block;
+    margin: auto;
+    text-align: justify;
+}

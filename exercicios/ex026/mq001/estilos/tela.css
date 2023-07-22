@@ -13,7 +13,7 @@ html {
 }
 
 header {
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.493);
 }
 
 header h1 {
@@ -21,21 +21,40 @@ header h1 {
 }
 
 menu ul {
+    text-align: center;
     list-style-type: none;
     background-color: gray;
 }
 
 menu li {
-    background-color: darkcyan;
+    background-color: rgb(49, 54, 54);
     color: beige;
     display: inline-block;
     padding: 10px;
 
 }
 
+
 article {
-    width: 650px;
+    max-width: 650px;
     display: block;
     margin: auto;
     text-align: justify;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+}
+
+footer {
+    font-size: 12px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.493);
 }
